@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Increment/Decrement</title>
+</head>
+<body>
+    <h1>Number: <span id="number">0</span></h1>
+    <button id="plusBtn">+</button>
+    <button id="minusBtn">-</button>
+
+    <script>
+        // Get references to the HTML elements
+        const numberElement = document.getElementById('number');
+        const plusButton = document.getElementById('plusBtn');
+        const minusButton = document.getElementById('minusBtn');
+
+        let currentNumber = 0;
+
+        // Function to update the number display
+        function updateNumberDisplay() {
+            numberElement.textContent = currentNumber;
+        }
+
+        // Event listener for the plus button
+        plusButton.addEventListener('click', () => {
+            currentNumber += 1;
+            updateNumberDisplay();
+        });
+
+        // Event listener for the minus button
+        minusButton.addEventListener('click', () => {
+            currentNumber -= 1;
+            updateNumberDisplay();
+        });
+
+        // Initial display update
+        updateNumberDisplay();
+    </script>
+</body>
+</html>
